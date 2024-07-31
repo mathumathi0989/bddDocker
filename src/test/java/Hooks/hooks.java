@@ -4,26 +4,31 @@ import java.net.MalformedURLException;
 
 import org.openqa.selenium.WebDriver;
 
-import driver.driverFactory;
 import context.driverContext;
+import driver.driverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
+
 public class hooks {
 
-	 private WebDriver driver;
+	private WebDriver driver;
 
-	    @Before
-	    public void setUp() throws MalformedURLException {
-	        String browser = System.getProperty("browser", "chrome");
-	        driver = driverFactory.getDriver(browser);
-	        driverContext.setDriver(driver);
-	    }
+	@Before
+    public void setUp() throws Exception {
+        String browser = driverContext.getBrowser();
+        driver = driverFactory.getDriver(browser);
+        if (driver == null) {
+            throw new IllegalStateException("WebDriver instance could not be created.");
+        }
+        driverContext.setDriver(driver);
+        System.out.println("WebDriver initialized: " + browser);
+    }
 
-	    @After
-	    public void tearDown() {
-	        if (driver != null) {
-	            driver.quit();
-	        }
-	    }
-}
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+    }

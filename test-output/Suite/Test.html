@@ -1,0 +1,168 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 31 16:17:14 EDT 2024</td>
+</tr>
+<tr><td>Total time:</td><td>2 seconds (2518 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testrunner.testRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.testRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if user able to login", "Login Functionality for an ecommerce application"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn&apos;t exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;92e4d10d6b31&apos;, ip: &apos;172.18.0.3&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.6.32-linuxkit&apos;, java.version: &apos;1.8.0_292&apos;
+Driver info: driver.version: unknown
+remote stacktrace: #0 0x555555f7e8f3 &lt;unknown&gt;
+#1 0x555555a63ba8 &lt;unknown&gt;
+#2 0x555555a86e33 &lt;unknown&gt;
+#3 0x555555a829ef &lt;unknown&gt;
+#4 0x555555abc995 &lt;unknown&gt;
+#5 0x555555ab6d63 &lt;unknown&gt;
+#6 0x555555a8d144 &lt;unknown&gt;
+#7 0x555555a8e135 &lt;unknown&gt;
+#8 0x555555fadc3e &lt;unknown&gt;
+#9 0x555555fc36b7 &lt;unknown&gt;
+#10 0x555555faeb95 &lt;unknown&gt;
+#11 0x555555fc4b05 &lt;unknown&gt;
+#12 0x555555fa32ab &lt;unknown&gt;
+#13 0x555555fdf248 &lt;unknown&gt;
+#14 0x555555fdf3c8 &lt;unknown&gt;
+#15 0x555555ffa33d &lt;unknown&gt;
+#16 0x7fffff7a6609 start_thread
+ 
+Host info: host: &apos;DheenatalansAir.fios-router.home&apos;, ip: &apos;fe80:0:0:0:1048:c625:ea10:1dec%en0&apos;
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.4.1&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at driver.driverFactory.getDriver(driverFactory.java:18)
+	at Hooks.hooks.setUp(hooks.java:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1539827598", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1539827598'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
+  (unknown error: DevToolsActivePort file doesn&apos;t exist)
+  (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
+System info: host: &apos;92e4d10d6b31&apos;, ip: &apos;172.18.0.3&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.6.32-linuxkit&apos;, java.version: &apos;1.8.0_292&apos;
+Driver info: driver.version: unknown
+remote stacktrace: #0 0x555555f7e8f3 &lt;unknown&gt;
+#1 0x555555a63ba8 &lt;unknown&gt;
+#2 0x555555a86e33 &lt;unknown&gt;
+#3 0x555555a829ef &lt;unknown&gt;
+#4 0x555555abc995 &lt;unknown&gt;
+#5 0x555555ab6d63 &lt;unknown&gt;
+#6 0x555555a8d144 &lt;unknown&gt;
+#7 0x555555a8e135 &lt;unknown&gt;
+#8 0x555555fadc3e &lt;unknown&gt;
+#9 0x555555fc36b7 &lt;unknown&gt;
+#10 0x555555faeb95 &lt;unknown&gt;
+#11 0x555555fc4b05 &lt;unknown&gt;
+#12 0x555555fa32ab &lt;unknown&gt;
+#13 0x555555fdf248 &lt;unknown&gt;
+#14 0x555555fdf3c8 &lt;unknown&gt;
+#15 0x555555ffa33d &lt;unknown&gt;
+#16 0x7fffff7a6609 start_thread
+ 
+Host info: host: &apos;DheenatalansAir.fios-router.home&apos;, ip: &apos;fe80:0:0:0:1048:c625:ea10:1dec%en0&apos;
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;14.4.1&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}]}]
+Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at driver.driverFactory.getDriver(driverFactory.java:18)
+	at Hooks.hooks.setUp(hooks.java:20)
+</pre></div></td>
+<td>1</td>
+<td>testrunner.testRunner@3e0e1046</td></tr>
+</table><p>
+</body>
+</html>

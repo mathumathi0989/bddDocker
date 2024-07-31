@@ -8,12 +8,20 @@ import io.cucumber.java.en.When;
 
 public class loginStepDefinition {
 
-	  private WebDriver driver = driverContext.getDriver();
-	
+	  private WebDriver driver;
+	  
+	  public loginStepDefinition() {
+	        this.driver = driverContext.getDriver();
+	        if (this.driver == null) {
+	            throw new IllegalStateException("WebDriver instance is null. Ensure it is initialized.");
+	        }
+	    }
+	  
+	  
 	@Given("Go to login page")
 	public void go_to_login_page() {
-	   System.out.println("Login page displayed");
-	   driver.get("http://google.com");
+	        System.out.println("Login page displayed");
+	        driver.get("http://google.com");
 	}
 	@When("I enter username and password")
 	public void i_enter_username_and_password() {
