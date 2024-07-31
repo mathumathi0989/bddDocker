@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/your-repo.git', branch: 'main'
+                git url: 'https://github.com/mathumathi0989/bddDocker.git', branch: 'main'
             }
         }
         stage('Setup Docker') {
